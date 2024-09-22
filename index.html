@@ -3,129 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My First CSS Exercise</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
-<body><header><h1>Zain ul abideen</h1>
-<p>Crafting Timless Design, Elevating Brands</p>
-<hr>
-<nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav></header>
-
-<Section>id="introduction"
-    <h1>introduction</h1>
-    <p>
-        Im Zain from Pakistan and my Educational background comes with a Bachelor of Fine arts (Graphic Design).
-        <br>
-        Im an active freelancer on couple of online platforms where I compete in design related contests, plus im managing some social media handels and marketing campaigns for some of my clients. </p>
-        
-            <article>
-                <h1>Bio</h1>
-            <p>
-                With 8 years of freelance experience and over 3 in communication design, I speialize in UI, product packaging and brabd identities.
-                <br>
-                I have completed 100+ projects and won 80+ design competitions, including a Platinum Tag on 99designs. I create innovative, user-focused solutions that elevate brands.
-            </p>
-        </article> </Section>
-        <section> id="projects">
-            <h1>My Projects</h1>
-            <article>
-                <h2>Web Landing and Branding material</h2>
-                <p>For my latest client project, I was tasked with crafting a comprehensive visual identity for a THC-infused drink brand. This involved developing a dynamic website interface, an in-depth brand book, a sleek sell sheet, and branded merchandise. Each element was meticulously designed to reflect the brand's bold, modern aesthetic, seamlessly integrating advanced UI/UX principles with strong branding to enhance customer engagement and experience. This project showcases my ability to deliver cohesive and innovative design solutions across multiple platforms, from digital to physical products.</p>
-                <a 
-                href="https://www.behance.net/gallery/204528523/Web-Ui-Branding-for-Heti-(THC-infused-drink)">Heti landing Page</a>
-                <br>
-                <img
-                src="./images/efe2b7204528523.66aa5c7603f24.png"
-                alt="404 not found"
-                width="720px"/>
-
-                
-
-            </article>
-            <!-- Second article peoject heti -->
-             <article>
-                <h2> Heti sell sheet</h2>
-                <p>
-                    its the same project I mentioned in my above heading but this one is the sell sheet for heti.
-                </p>
-                <a href="https://www.behance.net/gallery/204528523/Web-Ui-Branding-for-Heti-(THC-infused-drink)">Heti sell sheet</a>
-                <br>
-                <img src="./images/Sell sheet v12_page-0001.jpg" 
-                alt="404 not found"
-                width="720px"/>
-            </article>
+<body>
+    <header>
+        <h1>Welcome to My Web Page</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Home Section</h2>
+            <hr>
+            <p>This is the home section.</p>
         </section>
-
-            <!-- Contact Information -->
-
-            <section id="Contact"><h3>Contact Information</h3>
-            <p>Im always exied to collaborate on new projects or discuss creative opportunities. Whether you have a design inquiry, a potential partnership,
-                orjust want to say hello, feel free to reach out.
-            </p> 
-        <p>studio.zeed@gmail.com</p>
-    <a href="https://www.linkedin.com/in/zain-abideen-991b2a130/">linkedin</a>
-
-<!-- ~Contact for -->
-
-<h3>Your Details</h3>
-<form action="#">
-<label for="name">Name:</label>
-<input type="text" name="name" required /> <br/>
-<label for="email">Email</label>
-<input type="text" name="email"required> /> <br/>
-<label for="phone">Phone Number:</label><br />
-          <input type="tel" name="phone" id="phone" required /> <br />
-          <br />
-          <label for="Subject">Subject</label><br />
-          <input type="text" name="subject" id="subject" />
-          <br /><br />
-          <label for="message">Leave the message</label><br />
-          <textarea name="message" id="message" rows="4" required></textarea
-          ><br /><br />
-          <label for="contact-method">Preferred Contact Method:</label> &nbsp
-          &nbsp
-          <select id="contact-method" name="contact-method">
-            <option value="email">Email</option>
-            <option value="phone">Phone</option></select
-          ><br /><br />
-          <br />
-          <label for="availability">Availability:</label> &nbsp &nbsp &nbsp
-          &nbsp &nbsp &nbsp &nbsp &nbsp
-          <select id="availability" name="availability">
-            <option value="anytime">Anytime</option>
-            <option value="morning">Morning</option>
-            <option value="afternoon">Afternoon</option>
-            <option value="evening">Evening</option></select
-          ><br /><br />
-          <br />
-          <input type="submit" value="Submit" />
-          <input type="reset" value="Reset" />
+        <section id="about">
+            <h2>About Section</h2>
+            <hr>
+            <p>This is the about section.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Section</h2>
+            <hr>
+            <p>This is the contact section.</p>
+			<div id="formContainer">
+			<form action="#" method="post" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
         </form>
-      </section>
+		</div>
+        </section>
     </main>
-    <!-- Footer starts here -->
-    <footer>
-      <p>&copy; 2024 Zain ul abideen. All rights reserved.</p>
-      <p>Thank you for visiting!</p>
+    <footer> 
+        <p>&copy; 2024 Zain Web Page</p>
     </footer>
-    
-</form>
-
-</section>
-
-    
-                
-                
-             
-        
-    
-
-
-    
 </body>
 </html>
+
+
