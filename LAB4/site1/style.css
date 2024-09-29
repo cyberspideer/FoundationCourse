@@ -1,0 +1,130 @@
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 20px;
+    color: #2e2e2e;
+}
+
+/* Container for the entire user list section */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Title styling */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Search bar styling */
+.search-and-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .search-bar {
+    position: relative;
+    width: 300px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .nav-buttons {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .nav-buttons button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #fffefe;
+    color: #333;
+    margin-right: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .nav-buttons button:hover {
+    background-color: #29a8c8;
+    color: white;
+  }
+
+
+/* Card grid layout */
+.user-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* User card styling */
+.user-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+
+.user-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.user-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.user-card p {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+}
+
+/* Tags within user cards */
+.user-card .tags {
+    margin-top: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #f3f4fe;
+    color: #6c6f7b;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 12px;
+    margin: 5px 5px 0 0;
+}
+
+/* Active card styling */
+.user-card.active {
+    border: 2px solid #29a8c8;
+    padding: 18px;
+}
