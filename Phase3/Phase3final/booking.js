@@ -127,10 +127,25 @@ const checkInDate = checkInInput.value;
   errorMessage.textContent = "Both start and end dates are required.";
   errorMessage.classList.add("error-message");
     errorMessage.style.color = "red";
-    errorMessage.style.marginTop = "10px";
+    errorMessage.style.marginTop = "12px";
     btnInput.parentElement.appendChild(errorMessage);
     return;
   }
   
+   // Validiatoin part
+   const checkIn = new Date(checkInDate);
+   const checkOut = new Date(checkOutDate);
+ 
+   if (checkIn >= checkOut) {
+  const errorMessage = document.createElement("p");
+  errorMessage.textContent = "Invalid date: Start date must be before end date." ;
+    errorMessage.classList.add("error-message");
+    errorMessage.style.color = "red";
+    errorMessage.style.marginTop = "12px";
+
+  btnInput.parentElement.appendChild(errorMessage);
+     return;
+   }
+
   searchAttractions();
 });
