@@ -110,3 +110,27 @@ document
   .addEventListener("click", () => changePage(1));
 
 document.addEventListener("DOMContentLoaded", initAttractions);
+
+const checkInInput = document.querySelector('input[placeholder="Check-in"]');
+const checkOutInput = document.querySelector('input[placeholder="Check-out"]');
+
+btnInput.addEventListener("click", function () {
+const checkInDate = checkInInput.value;
+  const checkOutDate = checkOutInput.value;
+
+  
+  document.querySelectorAll(".error-message").forEach((msg) => msg.remove());
+
+  
+  if (!checkInDate || !checkOutDate) {
+    const errorMessage = document.createElement("p");
+  errorMessage.textContent = "Both start and end dates are required.";
+  errorMessage.classList.add("error-message");
+    errorMessage.style.color = "red";
+    errorMessage.style.marginTop = "10px";
+    btnInput.parentElement.appendChild(errorMessage);
+    return;
+  }
+  
+  searchAttractions();
+});
