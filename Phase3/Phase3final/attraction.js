@@ -1,7 +1,7 @@
 const API_URL =
   "https://travel-advisor.p.rapidapi.com/restaurants/list?location_id=297704&currency=USD&lang=en_US&lunit=km&limit=11";
 const RAPIDAPI_HOST = "travel-advisor.p.rapidapi.com";
-const RAPIDAPI_KEY = "7d9e6fdc39msh0f8966da609d6adp1a76ffjsna366989208fc";
+const RAPIDAPI_KEY = "7db3634b6msh25d0aff81e0b7f5p1ac4dejsnbdbc84d9d9af";
 
 async function fetchAttractions() {
   try {
@@ -41,10 +41,10 @@ async function populateAttractions() {
     card.innerHTML = `
       <div class="placeholder">
         <img src="${
-          attraction.photo ? attraction.photo.images.large.url : "default.jpg"
+           attraction.photo ? attraction.photo.images.large.url : "default.jpg"
         }" alt="${attraction.name}">
       </div>
-      <h3>${attraction.name || "Attraction"}</h3>
+    <h3>${attraction.name || "Attraction"}</h3>
       <p>${attraction.description || "No description available."}</p>
     `;
 

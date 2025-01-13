@@ -4,7 +4,7 @@ const roomType = document.getElementById("roomType");
 const API_URL =
   "https://travel-advisor.p.rapidapi.com/restaurants/list?location_id=297704&currency=USD&lang=en_US&lunit=km&limit=8";
 const RAPIDAPI_HOST = "travel-advisor.p.rapidapi.com";
-const RAPIDAPI_KEY = "7d9e6fdc39msh0f8966da609d6adp1a76ffjsna366989208fc";
+const RAPIDAPI_KEY = "97db3634b6msh25d0aff81e0b7f5p1ac4dejsnbdbc84d9d9af";
 
 let allAttractions = [];
 let currentPage = 1;
@@ -149,3 +149,52 @@ const checkInDate = checkInInput.value;
 
   searchAttractions();
 });
+
+const attractionsContainer = document.getElementById("attractions");
+
+// save attraction
+function saveToLocalStorage(attraction) {
+  let bookedAttractions = JSON.parse(localStorage.getItem("bookedAttractions")) || [];
+  bookedAttractions.push(attraction);
+  localStorage.setItem("bookedAttractions", JSON.stringify(bookedAttractions));
+}
+// updated
+function populateAttractions() {
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedAttractions = allAttractions.slice(startIndex, endIndex);
+
+  attractionsContainer.innerHTML = "";
+
+  if (paginatedAttractions.length === 0) {
+    attractionsContainer.innerHTML = "<p>No attractions found.</p>";
+    return;
+  }
+
+  paginatedAttractions.forEach((attraction) => {
+    const card = document.createElement("div");
+    card.classList.add("grid-item");
+
+    card.innerHTML = `
+      <div class="placeholder">
+        <img src="${
+          attraction.photo ? attraction.photo.images.large.url : "default.jpg"
+        }" alt="${attraction.name}">
+      </div>
+      <h3>${attraction.name || "Attraction"}</h3>
+      <p>${attraction.description || "No description available."}</p>
+      <button class="book-now-btn">Book Now</button>
+    `;
+
+    // book now button
+    const bookNowButton = card.querySelector(".book-now-btn");
+    bookNowButton.addEventListener("click", () => {
+      saveToLocalStorage(attraction);
+      alert(`${attraction.name} has been added to your bookings.`);
+    });
+
+    attractionsContainer.appendChild(card);
+  });
+
+  updatePaginationControls();
+}
